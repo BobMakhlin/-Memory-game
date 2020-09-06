@@ -1,0 +1,93 @@
+#site-wrapper {
+    font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hidden-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.non-selectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Header */
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2em 0;
+    border-bottom: 2px solid gray;
+}
+
+.company-name {
+    font-weight: bold;
+}
+
+.header__buttons {
+    display: flex;
+}
+.header__button {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    padding: 0 1.1em;
+
+    margin-left: 0.6em;
+}
+
+/* /Header */
+
+/* Main */
+
+#main .container {
+    padding-top: 1.5em;
+}
+
+/* /Main */
+
+
+/* Media queries */
+
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    html {
+        font-size: 14px;
+    }
+
+    #header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header__buttons {
+        margin-top: 0.8em;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1224px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+/* /Media queries */
