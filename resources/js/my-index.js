@@ -10,6 +10,7 @@ import initCard from './components/card/initializer.js';
 const nStartGameButton = document.querySelector('#start-game-button');
 const nFinishGameButton = document.querySelector('#finish-game-button');
 const nCards = document.querySelector('.cards');
+const nCongratsModalWindow = document.querySelector('.congrats-modal');
 
 let nLastCard = null;
 
@@ -101,7 +102,10 @@ async function onCardClicked(nCard) {
 
 
     if (isWin()) {
-        alert("You've won!");
+        showCongratsWindow();
+        await later(1000);
+        hideCongratsWindow();
+
         finishGame();
     }
 }
@@ -116,4 +120,12 @@ function makeCardActive(nCard) {
 function isWin() {
     let cards = [...nCards.childNodes];
     return !cards.some(card => card.classList.contains('card_flipped'));
+}
+
+
+function showCongratsWindow() {
+    nCongratsModalWindow.classList.add('modal_active');
+}
+function hideCongratsWindow() {
+    nCongratsModalWindow.classList.remove('modal_active');
 }
